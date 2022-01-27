@@ -49,7 +49,10 @@ void init_opengl(void);
 void physics(void);
 void render(void);
 
-
+//MVC architecture
+//M - Model
+//V - View
+//C - Controller
 
 //=====================================
 // MAIN FUNCTION IS HERE
@@ -251,9 +254,13 @@ void render()
 	static float pos[2] = {0.0f+w, g.yres/2.0f};
 	//
 	glClear(GL_COLOR_BUFFER_BIT);
+	
+	//Draw text
+	
+	
 	//Draw box.
 	glPushMatrix();
-	glColor3ub(150, 160, 220);
+	glColor3ub(200, 200, 200);
 	glTranslatef(pos[0], pos[1], 0.0f);
 	glBegin(GL_QUADS);
 		glVertex2f(-w, -w);
